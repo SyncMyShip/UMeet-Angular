@@ -1,0 +1,64 @@
+<div>
+    <nav>
+        <button mat-button color="primary" (click)="redirectHome()">Home</button>
+        <button mat-button color="primary" (click)="logout()">Logout</button>
+    </nav>
+</div>
+
+<div>
+    <h2>User Details</h2>
+    <mat-card>
+        <mat-card-header class="user-details-header"></mat-card-header>
+        <mat-card-content class="user-details-content">
+            Name: {{userData.Name}} <br>
+            Username: {{userData.Username}} <br>
+            Email: {{userData.Email}} <br>
+        </mat-card-content>
+
+        <br>
+
+        <button
+        mat-raised-button
+        (click)="updateUser()"
+        style="margin-right: 10px; width: 20%;"
+        color="primary"
+        >
+            Update Profile
+        </button>
+        <br>
+    </mat-card>
+</div>
+
+<div>    
+    <!-- Favorite Movies -->
+    <h2>Favorite Movies</h2>
+    <mat-card *ngFor="let movie of this.favoriteMovies" style="flex: 1 1 auto;">
+        <mat-card-header>
+        <mat-card-title>{{movie.Title}}</mat-card-title>
+            <mat-card-subtitle>Directed by: {{movie.Director.Name}}</mat-card-subtitle>
+        </mat-card-header>
+        <mat-card-actions>
+            <button 
+            mat-raised-button
+            (click)="removeFromFavorite(movie)"
+            color="primary"
+            style="margin-right: 10px;"
+            >
+                Remove from favorites
+            </button>
+        </mat-card-actions>
+    </mat-card>
+  </div>
+
+  <br>
+
+  <div>
+    <button
+    mat-raised-button
+    (click)="deleteUser()"
+    style="margin-right: 10px; width: 25%;"
+    color="warn"
+    >
+        Delete User
+    </button>
+  </div>
