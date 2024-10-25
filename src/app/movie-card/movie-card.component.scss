@@ -7,17 +7,17 @@
 
     // Media query for tablet screens
     @media (max-width: 1024px) {
-        grid-template-columns: repeat(2, 1fr); // 2 columns for medium screens
+        grid-template-columns: repeat(2, 1fr); 
     }
 
     // Media query for mobile screens
     @media (max-width: 600px) {
-        grid-template-columns: 1fr; // 1 column for small screens
+        grid-template-columns: 1fr;
     }
 }
 
 .movie-card {
-    box-sizing: border-box; // Ensure padding/borders are included in width
+    box-sizing: border-box; 
     display: grid;
     justify-items: center;
     justify-content: center;

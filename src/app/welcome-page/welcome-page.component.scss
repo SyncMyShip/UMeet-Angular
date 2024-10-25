@@ -3,23 +3,19 @@
 .main-page {
   display: flex;
   flex-direction: column;
-  justify-content: center; // Center buttons vertically within .main-page
-  align-items: center; // Center buttons horizontally
-  height: 750px; // Adjust as needed
-  // margin-top: 10px;
+  justify-content: center; 
+  align-items: center; 
+  height: 750px; 
+
 
   button {
-    margin: 10px 0; // Space between buttons
-    width: 40%; // Set a fixed width for buttons
-    background-color: "primary"; // Example color
-    color: white; // Text color
-    border: none; // Remove default border
-    border-radius: 4px; // Rounded corners
+    margin: 10px 0; 
+    width: 40%; 
+    background-color: "primary"; 
+    color: white; 
+    border: none; 
+    border-radius: 4px; 
     cursor: pointer;
-    padding: 10px; // Added padding for better button size
-
-    // &:hover {
-    //   background-color: darken("primary", 10%); // Darken on hover
-    // }
+    padding: 10px;
   }
 }

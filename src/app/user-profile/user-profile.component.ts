@@ -27,19 +27,8 @@ export class UserProfileComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    // this.getUserDetails();
     this.getFavoriteMovies();
   }
-
-
-  // getUserDetails(): void {
-  //   const user = (localStorage.getItem("user"))
-  //   this.fetchApiData.getUser(user).subscribe((resp: any) => {
-  //     console.log(user);
-  //     }, error => {
-  //       console.error(error)
-  //     });
-  //   }
 
   updateUser(): void {
     this.dialog.open(UserUpdateComponent, {
@@ -77,7 +66,7 @@ export class UserProfileComponent implements OnInit {
       // Refresh the favorite movies list
       this.getFavoriteMovies();
   
-      // console.log(`${movie.Title} successfully removed from favorites`);
+    
       window.location.reload()
     }, (err: any) => {
       console.error(err);
