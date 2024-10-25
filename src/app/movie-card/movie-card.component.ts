@@ -39,6 +39,7 @@ export class MovieCardComponent {
 
     if (user.FavoriteMovies.includes(movie._id)) {
       this.fetchApiData.deleteUserFavorites(user.Username, movie._id).subscribe(res => {
+        
         movie.isFavorite = false; // Update the movie's favorite status
         user.FavoriteMovies = res.FavoriteMovies;
         localStorage.setItem("user", JSON.stringify(user));
@@ -48,6 +49,7 @@ export class MovieCardComponent {
       });
     } else {
       this.fetchApiData.addUserFavorites(user.Username, movie._id).subscribe(res => {
+      
         movie.isFavorite = true; // Update the movie's favorite status
         user.FavoriteMovies = res.FavoriteMovies;
         localStorage.setItem("user", JSON.stringify(user));

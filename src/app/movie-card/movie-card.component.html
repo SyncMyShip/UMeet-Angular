@@ -1,13 +1,12 @@
 <div>
     <nav>
-        <button mat-button color="primary" (click)="goToProfile()">Profile</button>
-        <button mat-button color="primary" (click)="logout()">Logout</button>
+        <button mat-button color="accent" (click)="goToProfile()">Profile</button>
+        <button mat-button color="accent" (click)="logout()">Logout</button>
     </nav>
-    <div style="display: flex;">
-        <mat-card *ngFor="let movie of movies;" style="flex: 1 1 auto;">
+    <div class="movie-container">
+        <mat-card *ngFor="let movie of movies;" class="movie-card">
             <mat-card-header>
                 <mat-card-title>{{movie.Title}}</mat-card-title>
-                <mat-card-subtitle>{{movie.Director.Name}}</mat-card-subtitle>
             </mat-card-header>
             <img src={{movie.ImagePath}} alt= {{movie.Title}} />
             <mat-card-actions>
@@ -33,10 +32,8 @@
                     Description
                 </button>
                 <mat-icon
-                    fontIcon="{{ movie.isFavorite ? 'favorite' : 'favorite_border'}}"
                     id="{{movie._id}}-favorite-icon"
                     (click)="updateFavoriteMovies(movie)"
-                    class="material-icons"
                     [ngClass]="{'favorite': movie.isFavorite, 'not-favorite': !movie.isFavorite}"
                 >
                     {{ movie.isFavorite ? 'favorite' : 'favorite_border' }}
