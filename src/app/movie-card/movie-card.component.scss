@@ -1,0 +1,37 @@
+.movie-container {
+    margin: 0;
+    overflow: hidden;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: auto;
+
+    // Media query for tablet screens
+    @media (max-width: 1024px) {
+        grid-template-columns: repeat(2, 1fr); // 2 columns for medium screens
+    }
+
+    // Media query for mobile screens
+    @media (max-width: 600px) {
+        grid-template-columns: 1fr; // 1 column for small screens
+    }
+}
+
+.movie-card {
+    box-sizing: border-box; // Ensure padding/borders are included in width
+    display: grid;
+    justify-items: center;
+    justify-content: center;
+    margin: 20px;
+}
+
+mat-card-title {
+    font-size: medium;
+}
+
+nav {
+    margin-left: 20px;
+    margin-bottom: 20px;
+    font-weight: bold;
+    font-size: 30px;
+    margin-top: 15px;
+}

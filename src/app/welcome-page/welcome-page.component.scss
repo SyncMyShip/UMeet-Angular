@@ -1,0 +1,25 @@
+// $primary-color: #FFFFFF; // Example primary color, adjust as needed
+
+.main-page {
+  display: flex;
+  flex-direction: column;
+  justify-content: center; // Center buttons vertically within .main-page
+  align-items: center; // Center buttons horizontally
+  height: 750px; // Adjust as needed
+  // margin-top: 10px;
+
+  button {
+    margin: 10px 0; // Space between buttons
+    width: 40%; // Set a fixed width for buttons
+    background-color: "primary"; // Example color
+    color: white; // Text color
+    border: none; // Remove default border
+    border-radius: 4px; // Rounded corners
+    cursor: pointer;
+    padding: 10px; // Added padding for better button size
+
+    // &:hover {
+    //   background-color: darken("primary", 10%); // Darken on hover
+    // }
+  }
+}

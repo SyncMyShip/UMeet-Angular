@@ -1,1 +1,30 @@
-/* You can add global styles to this file, and also import other style files */
+@use '@angular/material' as mat;
+
+// Include the common styles for Angular Material.
+@include mat.core();
+
+// Define the palettes for your theme using the Material Design palettes available in palette.scss
+$UMeet-Angular-client-primary: mat.define-palette(mat.$indigo-palette);
+$UMeet-Angular-client-accent: mat.define-palette(mat.$pink-palette, A200, A100, A400);
+$UMeet-Angular-client-warn: mat.define-palette(mat.$red-palette);
+
+// Create the theme object for dark mode
+$UMeet-Angular-client-theme: mat.define-dark-theme((
+  color: (
+    primary: $UMeet-Angular-client-primary,
+    accent: $UMeet-Angular-client-accent,
+    warn: $UMeet-Angular-client-warn,
+  )
+));
+
+// Include theme styles for core and each component used in your app.
+@include mat.all-component-themes($UMeet-Angular-client-theme);
+
+html, body { 
+  font-family: 'Montserrat', sans-serif; // Or 'Raleway' as needed
+  height: 100%; 
+  background-color: #121212; // Dark background
+  color: #ffffff; // Light text color
+}
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
