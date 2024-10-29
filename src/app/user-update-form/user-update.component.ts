@@ -19,7 +19,7 @@ export class UserUpdateComponent implements OnInit {
 
   @Input() userData = {
     Name: user.Name || '',
-    Username: user.Username || '',
+    // Username: user.Username || '',
     Email: user.Email || ''
   };
 
